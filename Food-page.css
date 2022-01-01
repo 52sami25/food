@@ -1,0 +1,283 @@
+@import url(http://fonts.googleapis.com/css?family=Kameron:400,700);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body{
+    display: flex;
+}
+/*start nav*/
+.nav{
+    visibility: hidden;
+    height: 100%;
+    max-width: 10rem;
+    padding: 20px;
+    padding-top: 70px;
+    float: left;
+    background-color: #ffae00;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: fixed;
+    transform: translateX(-100px);
+    transition: 0.2s;
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+.nav i{
+    font-size: 30px;
+    margin-bottom: 65px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.nav a{
+    text-decoration: none;
+    margin: 0 auto;
+    color: black;
+}
+
+.nav a i:hover{
+    background-color: #b98618;
+    color: #000000;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    cursor: pointer;
+}
+i p{
+    font-size: 17px;
+}
+#click{
+    display: none;
+}
+.click{
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    margin: 14px;
+    position: fixed;
+    float: right;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffae00;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    z-index: 100;
+}
+.click:hover{
+    color: white;
+    transform: scale(.9);
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    cursor: pointer;
+}
+.fa-bars{
+    font-size: 25px !important;
+}
+#click:checked ~ .nav{
+   visibility: visible;
+   transform: translateX(0px);
+   -webkit-transform: translateX(0px);
+   -moz-transform: translateX(0px);
+   -ms-transform: translateX(0px);
+   -o-transform: translateX(0px);
+}
+.nav label{
+    position: relative;
+    padding: 6px;
+}
+.fa-arrow-left:hover{
+    color: white;
+    margin-bottom: 5px;
+    box-shadow: none;
+}
+.fa-arrow-left{
+    margin-top: -7px;
+}
+/*end nav*/
+/*start background*/
+.background img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.3;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+/*end background*/
+/*start card*/
+.container-card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    padding: 150px 0 50px 0 ;  
+    box-shadow: 0 0 18px #c7aeae; 
+}
+.contour-card{
+    width: 310px;
+    height: 300px;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    top: -80px;
+    background-color: #ffae00;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+.card{
+    width: 270px;
+    height: 100%;
+    margin-bottom: 100px;
+    border-radius:15px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    -ms-border-radius:15px;
+    -o-border-radius:15px;
+    overflow: hidden;
+    padding: 0;
+}
+.card img{
+    position: relative;
+    height: 100%; 
+    width: 100%;   
+}
+.caption{
+    width: 10rem;
+    height: 2rem;
+    position: relative;
+    top: -50px;
+    left: 50px;
+    padding: 4px;
+    font-size: 13px;
+    overflow: hidden;
+    background-color: #ffffff98;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: .7s;
+    cursor: pointer;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+}
+.caption h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.caption p{
+    font-size: 17px;
+}
+.caption:hover{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -264px;
+    left: 0px;
+    padding: 4px;
+    background-color: white;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: .7s;
+    cursor: pointer;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+    border: 2px solid black;
+}
+.from-left{
+ animation: from-left 0.6s;
+ -webkit-animation: from-left 0.6s;
+}
+.from-right{
+    animation: from-right 0.6s;
+    -webkit-animation: from-right 0.6s;
+}
+.from-bottom{
+    animation: from-bottom 0.6s;
+    -webkit-animation: from-bottom 0.6s;
+}
+.from-top{
+    animation: from-top 0.6s;
+    -webkit-animation: from-top 0.6s;
+}
+@keyframes from-left{
+0%{
+    transform:translateX(-250px) ;
+    -webkit-transform:translateX(-250px) ;
+    -moz-transform:translateX(-250px) ;
+    -ms-transform:translateX(-250px) ;
+    -o-transform:translateX(-250px) ;
+}
+}
+@keyframes from-right{
+    0%{
+        transform:translateX(250px) ;
+        -webkit-transform:translateX(250px) ;
+        -moz-transform:translateX(250px) ;
+        -ms-transform:translateX(250px) ;
+        -o-transform:translateX(250px) ;
+}
+}
+@keyframes from-bottom{
+    0%{
+        transform:translateY(250px) ;
+        -webkit-transform:translateY(250px) ;
+        -moz-transform:translateY(250px) ;
+        -ms-transform:translateY(250px) ;
+        -o-transform:translateY(250px) ;
+} 
+}
+@keyframes from-top{
+    0%{
+        transform:translateY(-250px) ;
+        -webkit-transform:translateY(-250px) ;
+        -moz-transform:translateY(-250px) ;
+        -ms-transform:translateY(-250px) ;
+        -o-transform:translateY(-250px) ;
+}  
+}
+/*end card*/
